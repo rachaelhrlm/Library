@@ -38,6 +38,9 @@ class Member {
     public function updateSecondName($name) {
         return $this->SecondName = $name;
     }
+    public function updateFirstName($name) {
+        return $this->FirstName = $name;
+    }
 }
 
 //We've considered inhertinence and possible uses of polymorphism but because we 
