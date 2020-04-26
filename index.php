@@ -7,10 +7,21 @@
         include 'Classes/Staff.php';
         include 'Classes/Paypal.php';
 //        include 'Classes/Autoloader.php'; --opted out because of error finding a non-existent "IBillable.php"
+        require_once 'Classes/Items.php';
+        require_once 'Classes/Book.php';
+        require_once 'Classes/AudioBook.php';
+        require_once 'Classes/Song.php';
+        require_once 'Classes/Movie.php';
+        
         use Classes\Member;
         use Classes\Person;
         use Classes\Paypal;
         use Classes\Staff;
+        use Classes\Items;
+        use Classes\Book;
+        use Classes\AudioBook;
+        use Classes\Song;
+        use Classes\Movie;
         ?>
 <html>
     <head>
@@ -36,6 +47,13 @@
         
         $John->Introduction();
         $Amanda->Introduction();
+        
+        $OceanTwelve=new Movie(4, "OceanTwelve");
+        echo $OceanTwelve->getItem("topShelf"). "<br>";
+        
+        $AChildCalledIt= new AudioBook(5, "AChildCalledIt");
+        echo $AChildCalledIt->playItem()."<br>";
+    
         ?>
     </body>
 </html>

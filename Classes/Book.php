@@ -8,7 +8,7 @@
 
 namespace Classes;
 
-Class Book {
+Class Book extends Items {
     Private $BookID;
     Private $Name;
     Private $ISBN;
@@ -28,10 +28,6 @@ Class Book {
         $this->Author=$Author;
         $this->StockQuantity=$StockQuantity;
     }
-    
-    Public function getName(){
-        return $this->name;
-    }  
     
      Public function getBookID(){
         return $this->BookID;
@@ -54,9 +50,15 @@ Class Book {
     Public function getAuthor(){
         return $this->Author;
     }
-        Public function getStockQuantity(){
+    Public function getStockQuantity(){
         return $this->StockQuantity;
-    }     
-            
-}
+    }  
+    Public function store($location){
+        return $this->location=$location;
+    }
+    
+    Public function getItem($location) {
+        echo "this book is in $location <br>";
+} 
+} 
 
