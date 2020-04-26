@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Apr-2020, 20:22:11
+    Author     : pasca
+*/
+.header{
+    background-color: grey;
+    padding: 20px;
+}
+.logo {
+    background-color: pink;
+    padding: 20px;
+}
+.Header2{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.NavBar{
+    background-color: lightsteelblue;
+    padding: 20px;
+}
+.Content{
+    background-color: white;
+    padding: 20px;
+    height: 20vw;
+}
+.Footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}

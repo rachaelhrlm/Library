@@ -1,59 +1,47 @@
 <!DOCTYPE html>
-<?php
-//Order of includes matter. Parent classes should be included before child classes.
-        include 'Classes/Interfaces.php';
-        include 'Classes/Person.php';
-        include 'Classes/Member.php';
-        include 'Classes/Staff.php';
-        include 'Classes/Paypal.php';
-//        include 'Classes/Autoloader.php'; --opted out because of error finding a non-existent "IBillable.php"
-        require_once 'Classes/Items.php';
-        require_once 'Classes/Book.php';
-        require_once 'Classes/AudioBook.php';
-        require_once 'Classes/Song.php';
-        require_once 'Classes/Movie.php';
-        
-        use Classes\Member;
-        use Classes\Person;
-        use Classes\Paypal;
-        use Classes\Staff;
-        use Classes\Items;
-        use Classes\Book;
-        use Classes\AudioBook;
-        use Classes\Song;
-        use Classes\Movie;
-        ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="Style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <?php
-        $John = NEW Staff('1','john.smith@gmail.com','John','Smith','1991-10-10','BN1 7JF','27,000');
-        echo "Hi! My name is " . $John->getFirstName() . " " . $John->getSecondName() . " " . "<br> My Staff id is " . $John->getStaffID() . "<br>";
 
-        $Amanda = NEW Member('2','amanda.smith@gmail.com','Amanda','Smith','1991-12-12','BN1 7JF');
-        echo $Amanda->getMemberID() . "<br>";
-        echo $Amanda->getSecondName() . "<br>";
-        
-        $Amanda->updateSecondName('Tolstoy');
-        echo $Amanda->getSecondName(). "<br>";
-        
-        $Amanda->borrowBook('slime');
-        
-        $paymentType = New Paypal();
-        $Amanda->SettleFines($paymentType);   
-        
-        $John->Introduction();
-        $Amanda->Introduction();
-        
-        $OceanTwelve=new Movie(4, "OceanTwelve");
-        echo $OceanTwelve->getItem("topShelf"). "<br>";
-        
-        $AChildCalledIt= new AudioBook(5, "AChildCalledIt");
-        echo $AChildCalledIt->playItem()."<br>";
-    
+    <body>
+        <div class="container">
+            <div class="row header"> 
+                <div class="col-md-10"> </div>
+                <div class="col-md-2 logo">logo</div>
+            </div>
+            <div class="row Header2">
+                <div class="col-md-2 PageTitle"> PageTitle </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-2 SearchBar"> SearchBar</div>
+            </div>
+            <!-- the middle column is for Bootstrap while the second one is for personal design-->        
+            <div class="row NavBar"> 
+                <div class="col-md-3">Home</div>
+                <div class="col-md-3">Location and Hours</div>
+                <div class="col-md-3">Library Services</div>
+                <div class="col-md-3">Contact Us</div>
+            </div> 
+            <div class="row Content"></div>
+            <div class="row Footer"> Footer </div>
+            
+
+
+
+        </div>
+        <?php
+        // put your code here
         ?>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
