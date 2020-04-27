@@ -2,6 +2,7 @@
 <?php
 //Order of includes matter. Parent classes should be included before child classes.
         include 'Classes/Interfaces.php';
+        include 'classes/Traits.php';
         include 'Classes/Person.php';
         include 'Classes/Member.php';
         include 'Classes/Staff.php';
@@ -14,6 +15,7 @@
         require_once 'Classes/Movie.php';
         
         use Classes\Member;
+        use Classes\Traits;
         use Classes\Person;
         use Classes\Paypal;
         use Classes\Staff;
@@ -53,6 +55,8 @@
         
         $AChildCalledIt= new AudioBook(5, "AChildCalledIt");
         echo $AChildCalledIt->playItem()."<br>";
+        
+        $Amanda->asConnect('Amanda');
     
         ?>
     </body>
