@@ -6,3 +6,10 @@
  * and open the template in the editor.
  */
 
+namespace Classes;
+
+trait Connectable {
+   public function asConnect($keyWord) {
+       echo "$keyWord is connected to the database";
+   }
+}

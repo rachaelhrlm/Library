@@ -9,6 +9,7 @@
 namespace Classes;
 
 abstract class Items {
+    use Connectable;
     abstract function store($location);
     public function getItem($location) {
         return $this->item=$location;
