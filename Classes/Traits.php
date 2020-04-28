@@ -12,3 +12,4 @@ trait Connectable {
         echo "$keyWord is connected to the database";
     }
 }
+

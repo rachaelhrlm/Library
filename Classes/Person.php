@@ -7,7 +7,6 @@ namespace Classes;
 abstract class Person { // cannot be instantiated 
     
     use Connectable;
-    
     Protected $Email;
     Protected $FirstName;
     Protected $SecondName;

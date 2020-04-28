@@ -2,7 +2,7 @@
 <?php
 //Order of includes matter. Parent classes should be included before child classes.
         include 'Classes/Interfaces.php';
-        include 'classes/Traits.php';
+        include 'Classes/Traits.php';
         include 'Classes/Person.php';
         include 'Classes/Member.php';
         include 'Classes/Staff.php';
@@ -16,6 +16,7 @@
         
         use Classes\Member;
         use Classes\Traits;
+        use Classes\Connectable;
         use Classes\Person;
         use Classes\Paypal;
         use Classes\Staff;
@@ -32,10 +33,10 @@
     </head>
     <body>
         <?php
-        $John = NEW Staff('1','john.smith@gmail.com','John','Smith','1991-10-10','BN1 7JF','27,000');
+        $John = new Staff('1','john.smith@gmail.com','John','Smith','1991-10-10','BN1 7JF','27,000');
         echo "Hi! My name is " . $John->getFirstName() . " " . $John->getSecondName() . " " . "<br> My Staff id is " . $John->getStaffID() . "<br>";
 
-        $Amanda = NEW Member('2','amanda.smith@gmail.com','Amanda','Smith','1991-12-12','BN1 7JF');
+        $Amanda = new Member('2','amanda.smith@gmail.com','Amanda','Smith','1991-12-12','BN1 7JF');
         echo $Amanda->getMemberID() . "<br>";
         echo $Amanda->getSecondName() . "<br>";
         
@@ -44,7 +45,7 @@
         
         $Amanda->borrowBook('slime');
         
-        $paymentType = New Paypal();
+        $paymentType = new Paypal();
         $Amanda->SettleFines($paymentType);   
         
         $John->Introduction();
