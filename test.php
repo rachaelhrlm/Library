@@ -15,6 +15,7 @@
         require_once 'Classes/Movie.php';
         
         use Classes\Member;
+        use Classes\Traits;
         use Classes\Connectable;
         use Classes\Person;
         use Classes\Paypal;

@@ -5,11 +5,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 namespace Classes;
 
 trait Connectable {
-   public function asConnect($keyWord) {
-       echo "$keyWord is connected to the database";
-   }
+    public function asConnect($keyWord) {
+        echo "$keyWord is connected to the database";
+    }
 }
+
