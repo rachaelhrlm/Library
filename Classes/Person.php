@@ -3,6 +3,7 @@
 
 // Create namespace
 namespace Classes;
+use \PDO;
 
 abstract class Person { // cannot be instantiated 
     
@@ -40,7 +41,7 @@ abstract class Person { // cannot be instantiated
         $DB_USER = 'root';
         $DB_PASS = '';
         try {
-            $pdo = new Classes\PDO($DB_DSN, $DB_USER, $DB_PASS);
+            $pdo = new \PDO($DB_DSN, $DB_USER, $DB_PASS);
         } catch (Exception $ex) {
             die($ex->getMessage());
         }
@@ -54,7 +55,7 @@ abstract class Person { // cannot be instantiated
         $conn->execute([$author, $bookname, $ISBN]);
         $results=$conn->fetchAll();
         foreach($results as $result) {
-            echo $result ["Title"] . $result["Author"];
+            echo $result ["Title"] . $result["Author"] . $result["ISBN"];
         }    
     }
     public function borrowBook($book){
