@@ -35,8 +35,27 @@ abstract class Person { // cannot be instantiated
         return $this->FirstName = $name;
     }
     
-    public function searchBook($book){ // Add shared attributes inside the person  
-        echo "You have searched for $book <br>";
+    protected function Connect() {
+        $DB_DSN = 'mysql:host=localhost;dbname=Library';
+        $DB_USER = 'root';
+        $DB_PASS = '';
+        try {
+            $pdo = new Classes\PDO($DB_DSN, $DB_USER, $DB_PASS);
+        } catch (Exception $ex) {
+            die($ex->getMessage());
+        }
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    }
+
+    public function searchBook($author, $bookname, $ISBN){ // Add shared attributes inside the person  
+        $stmt = "call searchBook (?, ?, ?)";
+        $conn = self::Connect()->prepare($stmt);
+        $conn->execute([$author, $bookname, $ISBN]);
+        $results=$conn->fetchAll();
+        foreach($results as $result) {
+            echo $result ["Title"] . $result["Author"];
+        }    
     }
     public function borrowBook($book){
         echo "You want to borrow $book <br>" ;

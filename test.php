@@ -56,8 +56,8 @@
         
         $AChildCalledIt= new AudioBook(5, "AChildCalledIt");
         echo $AChildCalledIt->playItem()."<br>";
-        
-        $Amanda->asConnect('Amanda');
+               
+        person::searchBook("", "slime", "");
     
         ?>
     </body>
