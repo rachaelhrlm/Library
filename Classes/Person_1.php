@@ -4,7 +4,7 @@ namespace Classes;
 //Added "use\PDO" to specify using the predetermined PDO class from the php library. (Gets out of "Classes" namespace)
 use \PDO;
 
-abstract class Person { // cannot be instantiated 
+abstract class Person_1 { // cannot be instantiated 
     
     use Connectable;
     Protected $Email;
@@ -60,13 +60,15 @@ abstract class Person { // cannot be instantiated
         echo "Fines have been settled. <br>";
     }
     abstract public function Introduction();
-    public function Register ($FirstName, $SecondName, $DOB, $Postcode, $Email){
+    
+    public function Register ($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress){
         $stmn= "call addMember(?, ?, ?, ?, ?)";
         $conn= self::asConnect()->prepare($stmn);
-        $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $Email]);
+        $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $EmailAddress]);
         $results=$conn->fetchAll();
         foreach($results as $result) {
             echo $result["RESULT"];
-    } 
-}
+    }
+    
+    }
 }
