@@ -8,6 +8,7 @@ and open the template in the editor.
 //Order of includes matter. Parent classes should be included before child classes.
         include 'Classes/Interfaces.php';
         include 'Classes/Traits.php';
+        include 'Classes/Person.php';
         require_once 'Classes/Exceptions/RegisterExceptions.php';
         require_once 'Classes/Exceptions/SearchBookExceptions.php';
         include 'Classes/Person_1.php';
@@ -23,6 +24,7 @@ and open the template in the editor.
         
         use Classes\Member;
         use Classes\Connectable;
+        use Classes\Person;
         use Classes\Person_1;
         use Classes\Paypal;
         use Classes\Staff;
@@ -41,8 +43,8 @@ and open the template in the editor.
         <?php
         $Amanda = new Member('2','amanda.smith@gmail.com','Amanda','Smith','1991-12-12','BN1 7JF');
                 // Classes\Person_1::Register("Amanda", "Fluff", 19880612, "SE17 9HH", "amanda.fluff@yahoo.com");
-        $Amanda->searchBook('', "Slime", '');
-        $Amanda->Register("Amanda", "Fluff", 19880612, "SE17 9HH", "amanda.fluff@yahoo.com");
+        Person_1::searchBook('', "Slime", '');
+        Person_1::addMember("Amanda", "Fluff", 19880612, "SE17 9HH", "amanda.fluff@yahoo.com");
         ?>
     </body>
 </html>

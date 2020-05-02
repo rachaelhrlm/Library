@@ -61,7 +61,7 @@ abstract class Person_1 { // cannot be instantiated
     }
     abstract public function Introduction();
     
-    public function Register ($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress){
+    public function addMember ($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress){
         $stmn= "call addMember(?, ?, ?, ?, ?)";
         $conn= self::asConnect()->prepare($stmn);
         $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $EmailAddress]);
