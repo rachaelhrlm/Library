@@ -1,7 +1,7 @@
 <?php
 
 namespace Classes;
-
+include 'Classes/Person.php';
 class Staff extends Person{ 
     private $StaffID;
     private $Salary;

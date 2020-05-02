@@ -1,7 +1,7 @@
 <?php
 
 namespace Classes;
-
+include 'Classes/Person.php';
 class Member extends Person{ 
     private $MemberID;
     public function __construct($MemberID, $Email, $FirstName, $SecondName, $DOB, $Postcode) {

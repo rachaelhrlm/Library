@@ -1,9 +1,11 @@
 <?php
-// Create abstract class
 
-// Create namespace
 namespace Classes;
+//Added "use\PDO" to specify using the predetermined PDO class from the php library. (Gets out of "Classes" namespace)
 use \PDO;
+include 'Classes/Traits.php';
+include 'Classes/Exceptions/RegisterExceptions.php';
+include 'Classes/Exceptions/SearchBookExceptions.php';
 
 abstract class Person { // cannot be instantiated 
     
@@ -35,29 +37,21 @@ abstract class Person { // cannot be instantiated
     public function updateFirstName($name) {
         return $this->FirstName = $name;
     }
-    
-    protected function Connect() {
-        $DB_DSN = 'mysql:host=localhost;dbname=Library';
-        $DB_USER = 'root';
-        $DB_PASS = '';
-        try {
-            $pdo = new \PDO($DB_DSN, $DB_USER, $DB_PASS);
-        } catch (Exception $ex) {
-            die($ex->getMessage());
-        }
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $pdo;
-    }
-
     public function searchBook($author, $bookname, $ISBN){ // Add shared attributes inside the person  
+        //"?" means that you're expecting some form of input/data to be passed.
         $stmt = "call searchBook (?, ?, ?)";
-        $conn = self::Connect()->prepare($stmt);
+        //"self" is to reference the class while "$this" is to reference the object.
+        $conn = self::asConnect()->prepare($stmt);
+        //When executing with parameters, ordering is important. They should match the stored procedure parameter.
         $conn->execute([$author, $bookname, $ISBN]);
-        $results=$conn->fetchAll();
+        //fetchAll() can get multiple results. Best used for arrays or when there is more than one value being returned.
+        $results=$conn->fetchAll();     
+        //Results are associative arrays. Key->Value pair is ColumnName->RecordValue.
         foreach($results as $result) {
-            echo $result ["Title"] . $result["Author"] . $result["ISBN"];
+            echo $result["Title"] . $result["Author"] . $result["ISBN"];
         }    
     }
+    
     public function borrowBook($book){
         echo "You want to borrow $book <br>" ;
     }
