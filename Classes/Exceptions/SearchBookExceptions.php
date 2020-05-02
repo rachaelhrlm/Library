@@ -1,6 +1,7 @@
 <?php
 
 namespace Classes;
+use \Exception;
 
 class SearchBookExceptions extends Exception{
     
@@ -16,8 +17,6 @@ class SearchBookExceptions extends Exception{
     } catch (Exception $e) {
         echo "Try different keywords";    
     }
-    
-    
     
     function invalidAuthor($author) {
         if ($author===""){

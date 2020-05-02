@@ -2,7 +2,8 @@
 <?php
 //Order of includes matter. Parent classes should be included before child classes.
         include 'Classes/Interfaces.php';
-//        include 'Classes/Person.php';
+        include 'Classes/Traits.php';
+        include 'Classes/Person.php';
         include 'Classes/Member.php';
         include 'Classes/Staff.php';
         include 'Classes/Paypal.php';

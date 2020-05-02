@@ -3,9 +3,6 @@
 namespace Classes;
 //Added "use\PDO" to specify using the predetermined PDO class from the php library. (Gets out of "Classes" namespace)
 use \PDO;
-include 'Classes/Traits.php';
-include 'Classes/Exceptions/RegisterExceptions.php';
-include 'Classes/Exceptions/SearchBookExceptions.php';
 
 abstract class Person { // cannot be instantiated 
     
