@@ -11,7 +11,7 @@ use \PDO;
 
 trait Connectable {
 
-    protected function asConnect() {
+    protected static function asConnect() {
         $DB_DSN = 'mysql:host=localhost;dbname=Library';
         $DB_USER = 'root';
         $DB_PASS = '';   
