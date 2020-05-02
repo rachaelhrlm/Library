@@ -60,13 +60,4 @@ abstract class Person { // cannot be instantiated
         echo "Fines have been settled. <br>";
     }
     abstract public function Introduction();
-    public function Register ($FirstName, $SecondName, $DOB, $Postcode, $Email){
-        $stmn= "call addMember(?, ?, ?, ?, ?)";
-        $conn= self::asConnect()->prepare($stmn);
-        $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $Email]);
-        $results=$conn->fetchAll();
-        foreach($results as $result) {
-            echo $result["RESULT"];
-    } 
-}
 }

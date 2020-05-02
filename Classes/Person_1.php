@@ -69,6 +69,5 @@ abstract class Person_1 { // cannot be instantiated
         foreach($results as $result) {
             echo $result["RESULT"];
     }
-    
     }
 }
