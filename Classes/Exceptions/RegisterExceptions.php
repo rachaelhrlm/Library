@@ -8,3 +8,7 @@ class InvalidAgeException extends Exception {
 class InvalidPostcodeException extends Exception {
     
 }
+
+class InvalidPasswordException extends Exception {
+    
+}

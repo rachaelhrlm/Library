@@ -73,10 +73,10 @@ abstract class Person { // cannot be instantiated
 
     abstract public function Introduction();
 
-    public static function addMember($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress) {
-        $stmn = "call addMember(?, ?, ?, ?, ?)";
+    public static function addMember($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress, $Password) {
+        $stmn = "call addMember(?, ?, ?, ?, ?, ?)";
         $conn = self::asConnect()->prepare($stmn);
-        $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $EmailAddress]);
+        $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $EmailAddress, $Password]);
         $results = $conn->fetchAll();
         foreach ($results as $result) {
             echo $result["RESULT"];
