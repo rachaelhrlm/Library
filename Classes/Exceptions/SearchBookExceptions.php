@@ -1,9 +1,11 @@
 <?php
 
-namespace Classes;
+namespace Exceptions;
 use \Exception;
-
+class EmptyException extends Exception{}
+class InvalidISBNException extends Exception{}
 class SearchBookExceptions extends Exception{
+    
     
     function invalidTitle($title){
         if ($title===""){

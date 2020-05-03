@@ -27,10 +27,18 @@ and open the template in the editor.
 .Content{
     background-color: white;
     padding: 20px;
-    height: 20vw;
-}
+    }
 .Footer{
     background-color: black;
     color: white;
     padding: 20px;
 }
+
+.Box{
+    background-color: purple;
+    height: 75px;
+    width: 80%;
+    margin: 50px 100px 100px 100px;
+    padding: 20px
+}
+
