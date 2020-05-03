@@ -2,8 +2,6 @@
 
 namespace Classes;
 
-require_once 'Classes/Person.php';
-
 class Staff extends Person{ 
     private $StaffID;
     private $Salary;

@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/htdocs/Library/Classes/Interfaces.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Person.php</file>
+            <file>file:/C:/xampp/htdocs/Library/TestRegister.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Exceptions/SearchBookExceptions.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Exceptions/RegisterExceptions.php</file>
+            <file>file:/C:/xampp/htdocs/Library/test.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Member.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Traits.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Autoloader.php</file>
+            <file>file:/C:/xampp/htdocs/Library/Classes/Staff.php</file>
         </group>
     </open-files>
 </project-private>
