@@ -7,30 +7,58 @@ and open the template in the editor.
     Created on : 26-Apr-2020, 20:22:11
     Author     : pasca
 */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
 .header{
     background-color: grey;
     padding: 20px;
+    text-align: center;
 }
 .logo {
     background-color: pink;
-    padding: 20px;
+    font-size: 26px;
+    padding: 10px;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    border-radius: 15px;
 }
 .Header2{
     background-color: black;
     color: white;
     padding: 20px;
+    text-align: left;
 }
 .NavBar{
     background-color: lightsteelblue;
     padding: 20px;
+    text-align: left;
+    
 }
 .Content{
     background-color: white;
     padding: 20px;
-    height: 20vw;
 }
 .Footer{
     background-color: black;
     color: white;
     padding: 20px;
+}
+.Results{
+    text-align: center;
+    color: red;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 20px;
+}
+.Success {
+ text-align: center;
+    color: green;
+    border-width: 1px;
+    border-color: green;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 20px;
 }

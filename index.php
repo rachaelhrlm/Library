@@ -30,7 +30,10 @@ and open the template in the editor.
                 <div class="col-md-3">Library Services</div>
                 <div class="col-md-3">Contact Us</div>
             </div> 
-            <div class="row Content"></div>
+            <div class="row Content">
+                
+                
+            </div>
             <div class="row Footer"> Footer </div>
             
 
