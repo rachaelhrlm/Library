@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2020 at 09:59 PM
+-- Generation Time: May 04, 2020 at 07:27 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.0.21
 
@@ -161,9 +161,9 @@ FROM book
 INNER JOIN category ON book.Category=category.CategoryID
 INNER JOIN publisher ON book.Publisher=publisher.PublisherID
 INNER JOIN author ON book.Author=author.AuthorID
-WHERE book.ISBN=SearchISBN OR
-book.Name=SearchBookName OR
-author.Name=SearchAuthorName;
+WHERE book.ISBN LIKE concat('%',SearchISBN,'%') OR
+book.Name LIKE concat('%',SearchBookName,'%') OR
+author.Name LIKE concat('%',SearchAuthorName,'%');
 END$$
 
 DELIMITER ;
