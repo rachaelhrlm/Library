@@ -38,7 +38,9 @@ and open the template in the editor.
 .Content{
     background-color: white;
     padding: 20px;
-}
+
+    }
+
 .Footer{
     background-color: black;
     color: white;
@@ -61,4 +63,12 @@ and open the template in the editor.
     border-style: solid;
     padding: 5px;
     margin-top: 20px;
+}
+
+.Box{
+    background-color: purple;
+    height: 75px;
+    width: 80%;
+    margin: 50px 100px 100px 100px;
+    padding: 20px
 }

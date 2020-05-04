@@ -66,7 +66,8 @@ abstract class Person { // cannot be instantiated
         $results=$conn->fetchAll();
         //Results are associative arrays. Key->Value pair is ColumnName->RecordValue.
         foreach($results as $result) {
-            echo $result ["Title"] . $result["Author"] . $result["ISBN"];
+
+            echo $result["Title"] . ", " . $result["Author"] . ", " . $result["ISBN"] . " <br>";
         }    
     }
 
