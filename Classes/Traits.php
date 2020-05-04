@@ -10,7 +10,7 @@ namespace Classes;
 use \PDO;
 trait Connectable {
 
-    protected static function asConnect() {
+        protected function asConnect() {
         $DB_DSN = 'mysql:host=localhost;dbname=Library';
         $DB_USER = 'root';
         $DB_PASS = '';
@@ -19,7 +19,7 @@ trait Connectable {
         } catch (Exception $ex) {
             die($ex->getMessage());
         }
-        $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
     }
-
 }
