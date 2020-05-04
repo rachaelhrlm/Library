@@ -33,18 +33,24 @@ and open the template in the editor.
     background-color: lightsteelblue;
     padding: 20px;
     text-align: left;
-    
 }
+.NavBar a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+
 .Content{
     background-color: white;
-    padding: 20px;
-
+    padding: 50px 20px;
     }
 
 .Footer{
     background-color: black;
     color: white;
     padding: 20px;
+
 }
 .Results{
     text-align: center;

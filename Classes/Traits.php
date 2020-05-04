@@ -7,7 +7,7 @@
  */
 
 namespace Classes;
-
+use \PDO;
 trait Connectable {
 
     protected static function asConnect() {

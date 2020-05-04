@@ -20,7 +20,7 @@ use Exceptions\InvalidPasswordException;
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="Style.css" rel="stylesheet" type="text/css"/>
+        <link href="LibraryStyle.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
@@ -45,10 +45,10 @@ use Exceptions\InvalidPasswordException;
         <div class="container-fluid NavBar">
             <div class="container">
                 <div class="row justify-content-between"> 
-                    <div class="col-md-3">Home</div>
+                    <div class="col-md-3"><a href="index.php"> Home </a></div>
                     <div class="col-md-3">Location and Hours</div>
                     <div class="col-md-3">Library Services</div>
-                    <div class="col-md-3">Contact Us</div>
+                    <div class="col-md-3"><a href="Register.php"> Register </a></div>
                 </div> 
             </div>
         </div>
