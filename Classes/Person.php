@@ -3,7 +3,6 @@
 
 // Create namespace
 namespace Classes;
-//Added "use\PDO" to specify using the predetermined PDO class from the php library. (Gets out of "Classes" namespace)
 use \PDO;
 
 abstract class Person { // cannot be instantiated 
@@ -88,7 +87,7 @@ abstract class Person { // cannot be instantiated
 
     public static function addMember($FirstName, $SecondName, $DOB, $Postcode, $EmailAddress, $Password) {
         $stmn = "call addMember(?, ?, ?, ?, ?, ?)";
-        $conn = self::asConnect()->prepare($stmn);
+        $conn = self::Connect()->prepare($stmn);
         $conn->execute([$FirstName, $SecondName, $DOB, $Postcode, $EmailAddress, $Password]);
         $results = $conn->fetchAll();
         foreach ($results as $result) {
