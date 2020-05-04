@@ -44,8 +44,8 @@ use Exceptions\InvalidISBNException;
                 $search = $_POST;
                 
                 $search["keyword"] = trim(filter_input(INPUT_POST, 'keyword', FILTER_SANITIZE_STRING));
-                echo "No records found";
-                echo "<a href='http://localhost/Library/index.php'>Please try again</a>";
+//                echo "No records found";
+//                echo "<a href='http://localhost/Library/index.php'>Please try again</a>";
                 // Link the DB back to the results page to get the info back
 
                 try {
